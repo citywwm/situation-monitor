@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  situation-monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: situation-monitor:latest
+    container_name: situation-monitor
+    restart: unless-stopped
+    ports:
+      - "8080:80"
